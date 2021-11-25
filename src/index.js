@@ -1,11 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Button from './components/Button'
+import Router from './routes'
 const App = () => {
-  return <div>
-      <h1>This is my React app!</h1>
-      <Button>batatinha</Button>
-  </div>;
+  return <Router></Router>;
 };
 
 ReactDOM.render(<App/>, document.getElementById('app'))

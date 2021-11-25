@@ -1,5 +1,5 @@
 const path = require("path");
-const ESLintPlugin = require('eslint-webpack-plugin');
+const ESLintPlugin = require("eslint-webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 const htmlPlugin = new HtmlWebPackPlugin({
@@ -8,8 +8,8 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 const esLintOptions = {
-    context: './src'
-}
+  context: "./src",
+};
 
 module.exports = {
   mode: "development",
@@ -17,13 +17,14 @@ module.exports = {
     static: {
       directory: path.join(__dirname, "public"),
     },
+    historyApiFallback: true,
     compress: true,
     port: 9000,
     client: {
       logging: "error",
     },
   },
-  stats: 'errors-only',
+  stats: "errors-only",
   module: {
     rules: [
       {
